@@ -1,0 +1,221 @@
+body {
+    background-color: hsl(14, 25%, 72%);
+    font-family: "Red Hat Text", sans-serif;
+  }
+  
+  main {
+    /* border: 2px solid red; */
+    display: flex;
+    gap: -3%;
+    margin: 5%;
+    width: 80%;
+  }
+  
+  .title {
+    padding-left: 2%;
+  }
+  
+  .products {
+    /* border: 2px solid green; */
+    width: 80%;
+    height: 90vh;
+  }
+  
+  #cart {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(13, 31%, 94%);
+    width: 30%;
+    height: fit-content;
+    border-radius: 15px;
+  }
+  
+  #dynamic-list {
+    width: 100%;
+    height: 85%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 16px 0px;
+    overflow: auto;
+  }
+  
+  #dynamic-list::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .product-card {
+    border-radius: 10px;
+    width: 90%;
+    min-height: 400px;
+    margin: 0;
+    overflow: auto;
+    padding: 0;
+    margin: 0;
+    position: relative;
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .product-name {
+    font-size: 1.2vw;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    margin-bottom: 3px;
+  }
+  
+  .product-category {
+    font-size: 1vw;
+    color: hsl(60, 20%, 20%);
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    margin-bottom: 5px;
+  }
+  .product-price {
+    /* font-size: 16px; */
+    font-size: 1.2vw;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    color: hsl(14, 86%, 42%);
+  }
+  
+  .add-button {
+    border: 1px solid black !important;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    height: 2rem;
+    width: 60%;
+    position: absolute;
+    left: 20%;
+    top: 65%;
+  }
+  
+  .add-button span {
+    position: relative;
+    top: -3px;
+  }
+  .add-button:hover {
+    background-color: hsl(14, 86%, 42%);
+  }
+  
+  .add-button:active {
+    background-color: hsl(14, 86%, 32%);
+    transform: scale(0.95);
+  }
+  
+  .add-button:hover span {
+    color: white;
+    position: relative;
+    top: 1px;
+    font-size: 16px;
+  }
+  
+  .add-button svg {
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+  }
+  
+  .add-button:hover svg {
+    display: none;
+  }
+  
+  .add-button.added {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .add-button.added:hover {
+    background-color: white;
+  }
+  
+  .add-button.added:hover svg {
+    display: inline;
+  }
+  
+  .add-button.added:hover span {
+    color: black;
+    position: relative;
+    top: -3px;
+  }
+  .add-button.added:hover svg:active {
+    transform: scale(0.9);
+  }
+  
+  .add-button.added:active {
+    transform: none;
+  }
+  
+  .add-button.added svg {
+    background-color: hsl(14, 86%, 42%);
+    height: 1rem;
+    width: 1rem;
+    border-radius: 100%;
+    padding: 3px;
+  }
+  
+  .add-button.added span {
+    font-size: 14px;
+    align-self: center;
+  }
+  
+  #cart #cart-list svg {
+    position: relative;
+    left: 25%;
+  }
+  
+  #cart #cart-list p {
+    color: hsl(7, 20%, 60%);
+    font-size: 0.8vw;
+    text-align: center;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    position: relative;
+  }
+  
+  .cart-item p {
+    font-size: 0.8vw;
+    margin: 0;
+    padding: 0;
+    margin-left: 5%;
+  }
+  
+  .cart-item .remove-button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
+    position: absolute;
+    right: 10px;
+  }
+  
+  .cart-item .cart-item-counter {
+    position: absolute;
+    right: 50px;
+    font-size: 0.8vw;
+  }
+  

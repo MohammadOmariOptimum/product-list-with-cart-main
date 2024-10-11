@@ -10,6 +10,13 @@ body {
     margin: 5%;
     width: 80%;
   }
+  #cart-and-total{
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    width: 40%;
+    height: fit-content;
+  }
   
   .title {
     padding-left: 2%;
@@ -25,9 +32,30 @@ body {
     display: flex;
     flex-direction: column;
     background-color: hsl(13, 31%, 94%);
-    width: 30%;
+    width: 100%;
+    min-height: 250px;
     height: fit-content;
     border-radius: 15px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  #total{
+    background-color: hsl(13, 31%, 94%);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  #total button {
+    width: 50%;
+    position: relative;
+    left:25%;
+    background-color: hsl(14, 86%, 42%);;
+    border-radius: 15px;
+  }
+
+  #total button:active{
+    transform: scale(0.95);
   }
   
   #dynamic-list {
